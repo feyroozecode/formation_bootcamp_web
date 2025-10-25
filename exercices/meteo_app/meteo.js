@@ -39,7 +39,9 @@ async function getMeteoData() {
         const data = await response.json();
 
         // Etape 7 : Afficher les données
+        console.log("\n RESULTAT: ");
         console.log(data);
+        console.table(data);
         resultDiv.innerHTML = `
             <h2>Météo à ${data.name}, ${data.sys.country}</h2>
             <p><strong>Température :</strong> ${data.main.temp} °C</p>
